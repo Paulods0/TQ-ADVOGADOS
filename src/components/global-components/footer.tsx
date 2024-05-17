@@ -26,6 +26,7 @@ const Footer = () => {
       <div className="absolute -top-1 h-1 mx-auto left-1/2 -translate-x-1/2 bg-azul w-[300px] lg:w-[calc(100%-80px)]" />
 
       <img
+        loading="lazy"
         src="/footer-image.png"
         className="relative w-full h-[550px] object-cover"
       />

@@ -9,7 +9,7 @@ const HomePage = () => {
       <HeroSection />
       <IntroductionSection />
       <AreasSection />
-      {/* <EnciclopediaSection /> */}
+      <EnciclopediaSection />
     </main>
   )
 }
