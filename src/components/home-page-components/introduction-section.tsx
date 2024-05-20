@@ -1,15 +1,35 @@
+import { useRef } from "react"
 import Container from "../global-components/container"
 import IntroCard from "./intro-card"
+import { motion, useInView } from "framer-motion"
+
+const variants = {
+  initial: { opacity: 0, y: -40 },
+  animate: { opacity: 1, y: 0 },
+}
 
 const IntroductionSection = () => {
-  return (
-    <section className="lg:h-screen flex items-center justify-center w-full">
-      <Container className="flex flex-col-reverse items-center gap-12 md:grid md:grid-cols-2 md:place-items-center lg:place-items-start lg:gap-0">
-        <div className="">
-          <IntroCard />
-        </div>
+  const ref = useRef(null)
 
-        <div className="flex flex-col items-start gap-2">
+  const inView = useInView(ref, {
+    // once: true,
+    margin: "-300px",
+  })
+
+  return (
+    <motion.section
+      ref={ref}
+      // variants={variants}
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : -50 }}
+      className="lg:h-screen flex items-center justify-center w-full"
+    >
+      <Container className="flex flex-col-reverse items-center gap-12 md:grid md:grid-cols-2 md:place-items-center lg:place-items-start lg:gap-0">
+        <motion.div>
+          <IntroCard />
+        </motion.div>
+
+        <motion.div className="flex flex-col items-start gap-2">
           <h1 className="text-azul md:text-xl lg:text-2xl uppercase font-semibold">
             o escritório
           </h1>
@@ -28,9 +48,9 @@ const IntroductionSection = () => {
             expedita cupiditate nostrum voluptatum saepe inventore sequi ex illo
             nulla.
           </p>
-        </div>
+        </motion.div>
       </Container>
-    </section>
+    </motion.section>
   )
 }
 
