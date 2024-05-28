@@ -3,7 +3,7 @@ import { GrActions } from "react-icons/gr"
 import { IoHomeOutline } from "react-icons/io5"
 import { HiOutlineQuestionMarkCircle } from "react-icons/hi2"
 
-export const LINKS = [
+export const HEADER_LINKS = [
   {
     label: "inicial",
     link: "/",

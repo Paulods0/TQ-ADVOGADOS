@@ -17,7 +17,9 @@ module.exports = {
       },
     },
     extend: {
-      // azul: "#101D54",
+      fontFamily: {
+        MerriWeather: "Merriweather, serif",
+      },
       colors: {
         azul: "#062542",
         cinza: "#CFCECE",
