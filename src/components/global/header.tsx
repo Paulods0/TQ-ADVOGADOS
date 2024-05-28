@@ -6,7 +6,7 @@ import Search from "./search"
 const Header = () => {
   return (
     <header className="fixed z-10 w-full ">
-      <Container className="flex items-center bg-red-300 justify-between py-5">
+      <Container className="flex items-center justify-between py-5">
         <img src="logo.png" className="h-14 w-fit object-contain" />
 
         <div className="flex items-center gap-12">
