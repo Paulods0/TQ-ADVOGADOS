@@ -27,7 +27,6 @@ const Footer = () => {
           height: "680px",
           marginTop: "56px",
           position: "relative",
-         
         }}
       >
         <div className="w-[80%] mx-auto h-1 bg-azul absolute -top-1 left-1/2 -translate-x-1/2" />
@@ -56,7 +55,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 w-full">
               <input
                 className="border-b-2 placeholder:text-zinc-500 text-zinc-500 border-zinc-400 bg-transparent w-full outline-none"
-                type="tel"
+                type="number"
                 placeholder="Tel"
               />
               <input
@@ -66,7 +65,7 @@ const Footer = () => {
               />
             </div>
 
-            <textarea className="w-full placeholder:text-zinc-500 text-zinc-500 bg-zinc-100/70 resize-none rounded-xl border-2 border-zinc-400 h-[200px]" />
+            <textarea className="w-full outline-none p-4 placeholder:text-zinc-500 text-zinc-500 bg-zinc-100/70 resize-none rounded-xl border-2 border-zinc-400 h-[200px]" />
 
             <div className="flex flex-col">
               <p className="text-zinc-500">

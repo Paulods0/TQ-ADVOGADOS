@@ -2,11 +2,26 @@ import { NavLink } from "react-router-dom"
 import Container from "./container"
 import { HEADER_LINKS } from "@/constants"
 import Search from "./search"
+import { useState } from "react"
 
 const Header = () => {
+  const [canChange, setCanChange] = useState(false)
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      setCanChange(true)
+    } else {
+      setCanChange(false)
+    }
+  })
+
   return (
-    <header className="fixed z-10 w-full ">
-      <Container className="flex items-center justify-between py-5">
+    <header
+      className={`fixed w-full transition-all z-50 duration-200 ease-in-out ${
+        canChange ? "bg-white shadow-md" : "bg-transparent"
+      }`}
+    >
+      <Container className="flex items-center justify-between py-5 ">
         <img src="logo.png" className="h-14 w-fit object-contain" />
 
         <div className="flex items-center gap-12">
