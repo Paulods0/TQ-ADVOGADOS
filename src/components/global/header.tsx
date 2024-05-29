@@ -16,7 +16,9 @@ const Header = () => {
                 key={index}
                 to={link.link}
                 className={({ isActive }) =>
-                  isActive ? "text-azul capitalize" : "text-black capitalize"
+                  isActive
+                    ? " text-azul underline capitalize"
+                    : "text-azul  capitalize"
                 }
               >
                 {link.label}
