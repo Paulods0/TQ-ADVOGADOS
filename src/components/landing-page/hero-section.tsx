@@ -18,7 +18,7 @@ const HeroSection = () => {
     >
       <Container className="relative mt-14">
         <div className="w-fit mx-4 items-start justify-center flex flex-col gap-12">
-          <div className="flex flex-col md:text-7xl text-azul">
+          <div className="flex flex-col text-4xl md:text-7xl text-azul">
             <h1>Sociedade</h1>
             <h1>de Advogados, RL</h1>
           </div>

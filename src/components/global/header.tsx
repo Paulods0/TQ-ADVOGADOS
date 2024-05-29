@@ -3,8 +3,7 @@ import Container from "./container"
 import { HEADER_LINKS } from "@/constants"
 import Search from "./search"
 import { useState } from "react"
-
-import { TbMenuDeep } from "react-icons/tb"
+import MobileMenu from "../mobile-components/mobile-menu"
 
 const Header = () => {
   const [canChange, setCanChange] = useState(false)
@@ -45,9 +44,7 @@ const Header = () => {
           <Search />
         </div>
 
-        <button className="block lg:hidden">
-          <TbMenuDeep className="text-4xl  text-azul" />
-        </button>
+        <MobileMenu />
       </Container>
     </header>
   )
