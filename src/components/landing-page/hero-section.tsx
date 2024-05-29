@@ -14,6 +14,7 @@ const HeroSection = () => {
         zIndex: -1,
         position: "relative",
       }}
+      className=""
     >
       <Container className="relative mt-14">
         <div className="w-fit mx-4 items-start justify-center flex flex-col gap-12">

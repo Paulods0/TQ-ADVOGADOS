@@ -4,6 +4,8 @@ import { HEADER_LINKS } from "@/constants"
 import Search from "./search"
 import { useState } from "react"
 
+import { TbMenuDeep } from "react-icons/tb"
+
 const Header = () => {
   const [canChange, setCanChange] = useState(false)
 
@@ -21,10 +23,10 @@ const Header = () => {
         canChange ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <Container className="flex items-center justify-between py-5 ">
-        <img src="logo.png" className="h-14 w-fit object-contain" />
+      <Container className="flex items-center justify-between py-5">
+        <img src="logo.png" className="h-8 lg:h-14 w-fit object-contain" />
 
-        <div className="flex items-center gap-12">
+        <div className="hidden lg:flex items-center gap-12">
           <nav className="flex items-center gap-4">
             {HEADER_LINKS.map((link, index) => (
               <NavLink
@@ -42,6 +44,10 @@ const Header = () => {
           </nav>
           <Search />
         </div>
+
+        <button className="block lg:hidden">
+          <TbMenuDeep className="text-4xl  text-azul" />
+        </button>
       </Container>
     </header>
   )

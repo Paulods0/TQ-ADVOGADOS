@@ -1,20 +1,5 @@
+import { FOOTER_DOWM, SOCIAL_MEDIAS } from "@/constants"
 import Container from "./container"
-import { SiFacebook, SiInstagram, SiLinkedin } from "react-icons/si"
-
-const SOCIAL_MEDIAS = [
-  {
-    icon: <SiFacebook />,
-    link: "https://facebook.com/",
-  },
-  {
-    icon: <SiInstagram />,
-    link: "https://instagram.com/",
-  },
-  {
-    icon: <SiLinkedin />,
-    link: "https://linkedin.com/",
-  },
-]
 
 const Footer = () => {
   return (
@@ -30,8 +15,9 @@ const Footer = () => {
         }}
       >
         <div className="w-[80%] mx-auto h-1 bg-azul absolute -top-1 left-1/2 -translate-x-1/2" />
+
         <Container className="flex items-center justify-end h-full">
-          <form className="bg-transparent space-y-8 w-[450px]">
+          <form className="bg-transparent space-y-8 w-full lg:w-[450px]">
             <div className="w-full">
               <h1 className="text-2xl text-azul uppercase font-semibold">
                 fale connosco
@@ -76,12 +62,8 @@ const Footer = () => {
               <div className="w-full flex items-center justify-between mt-4">
                 <div className="flex items-center gap-4">
                   {SOCIAL_MEDIAS.map((item, index) => (
-                    <a
-                      key={index}
-                      className="size-8 bg-azul flex items-center justify-center p-2 text-white text-lg rounded-full"
-                      href={item.link}
-                    >
-                      {item.icon}
+                    <a key={index} className="size-8" href={item.link}>
+                      <img src={item.icon} alt="icon" />
                     </a>
                   ))}
                 </div>
@@ -95,11 +77,14 @@ const Footer = () => {
         </Container>
       </section>
 
-      <section className="w-full h-24 bg-azul">
-        <Container className="flex items-center h-full justify-between text-white text-lg">
-          <span>(+244) 946 710 515</span>
-          <span>ad.cassoma@tqadvogados.co.ao</span>
-          <span>Av. 4 de Fevereiro, Marginal Edifício Kilamba 18º anda</span>
+      <section className="w-full h-auto lg:h-24 bg-azul">
+        <Container className="flex items-start gap-4 lg:gap-0 py-4 lg:py-0 lg:items-center lg:flex-row flex-col h-full justify-between text-white text-lg">
+          {FOOTER_DOWM.map((data, index) => (
+            <div key={index} className="flex items-center gap-2">
+              <img src={data.icon} className="size-8" alt="" />
+              <span>{data.text}</span>
+            </div>
+          ))}
         </Container>
       </section>
     </footer>

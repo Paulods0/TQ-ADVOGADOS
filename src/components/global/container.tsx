@@ -8,12 +8,7 @@ type Props = {
 
 const Container: FC<Props> = ({ children, className }) => {
   return (
-    <div
-      className={twMerge(
-        "w-[800px] md:w-[1200px] mx-auto",
-        className
-      )}
-    >
+    <div className={twMerge("w-full px-8 lg:px-0 lg:w-[1200px] mx-auto", className)}>
       {children}
     </div>
   )

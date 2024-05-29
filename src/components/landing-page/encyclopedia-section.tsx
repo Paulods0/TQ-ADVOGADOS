@@ -18,9 +18,10 @@ const EncyclopediaSection = () => {
       <h1 className="text-3xl font-semibold uppercase text-azul">
         enciclopédia jurídica
       </h1>
-      <div className="flex items-center h-[250px]">
-        <div className="border-2 border-azul p-4 rounded-[30px] w-full h-full flex items-start">
-          <div className="relative w-[800px] h-full">
+
+      <div className="w-full flex items-center h-fit lg:h-[270px]">
+        <div className="flex lg:flex-row flex-col items-center border-2 border-azul p-4 rounded-[30px] w-full h-full">
+          <div className="relative w-full lg:w-[450px] lg:h-full h-[240px] mb-4 lg:mb-0">
             <img
               src={`card/card-${filter}.jpg`}
               alt="card-image"
@@ -30,10 +31,11 @@ const EncyclopediaSection = () => {
 
           <hr className="h-full mx-6 w-[2px] bg-zinc-200" />
 
-          <div className="flex flex-col text-azul items-start justify-center h-full gap-6">
+          <div className="flex flex-col w-full text-azul items-center lg:items-start justify-center h-full gap-6">
             <h1 className="text-2xl uppercase font-semibold">
               Lorem ipsum dolor ({filter}).
             </h1>
+
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci
               hic nemo ducimus impedit fugit tempore libero laudantium
@@ -45,7 +47,7 @@ const EncyclopediaSection = () => {
           </div>
         </div>
 
-        <div className="h-1/2 mb-6 w-8 relative justify-center flex items-start flex-col">
+        <div className="h-1/2 hidden lg:flex mb-6 w-8 relative justify-center items-start flex-col">
           <button
             onClick={() => handleFilter("1")}
             className={`absolute shadow-xl left-0 top-0 text-white h-14 text-2xl transition-all duration-200 ease-in-out rounded-r-lg ${

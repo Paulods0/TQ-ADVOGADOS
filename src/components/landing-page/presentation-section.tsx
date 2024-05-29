@@ -2,8 +2,8 @@ import Container from "../global/container"
 
 const PresentationSection = () => {
   return (
-    <Container className="flex items-center mt-12 justify-between w-full gap-8">
-      <div className="relative h-[400px] w-[460px]">
+    <Container className="flex lg:flex-row flex-col items-center mt-12 justify-between w-full gap-8">
+      <div className="relative h-[400px] w-full lg:w-[460px]">
         <img
           src="woman.jpg"
           className="w-full h-full absolute inset-0 object-cover rounded-3xl"
