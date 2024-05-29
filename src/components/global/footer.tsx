@@ -18,7 +18,7 @@ const SOCIAL_MEDIAS = [
 
 const Footer = () => {
   return (
-    <footer className="w-full flex flex-col">
+    <footer className="w-full flex flex-col mt-16">
       <section
         style={{
           backgroundImage: "url('footer-image.png')",
