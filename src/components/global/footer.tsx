@@ -9,7 +9,7 @@ const Footer = () => {
           backgroundImage: "url('footer-image.png')",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          height: "680px",
+          height: "100vh",
           marginTop: "56px",
           position: "relative",
         }}

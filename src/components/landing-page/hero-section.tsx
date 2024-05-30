@@ -4,12 +4,13 @@ const HeroSection = () => {
   return (
     <section
       style={{
-        backgroundImage: 'url("hero-image-croped.jpg")',
+        backgroundImage: 'url("hero-image.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        height: "100vh",
+        height: "115vh",
         display: "flex",
+        padding: 50,
         alignItems: "center",
         zIndex: -1,
         position: "relative",
@@ -17,7 +18,7 @@ const HeroSection = () => {
       className=""
     >
       <Container className="relative mt-14">
-        <div className="w-fit mx-4 items-start justify-center flex flex-col gap-12">
+        <div className="w-fit items-start justify-center flex flex-col gap-12">
           <div className="flex flex-col text-4xl md:text-7xl text-azul">
             <h1>Sociedade</h1>
             <h1>de Advogados, RL</h1>

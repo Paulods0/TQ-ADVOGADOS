@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import Container from "./container"
 import { HEADER_LINKS } from "@/constants"
 import Search from "./search"
@@ -23,7 +23,9 @@ const Header = () => {
       }`}
     >
       <Container className="flex items-center justify-between py-5">
-        <img src="logo.png" className="h-8 lg:h-14 w-fit object-contain" />
+        <Link reloadDocument to="/">
+          <img src="logo.png" className="h-8 lg:h-14 w-fit object-contain" />
+        </Link>
 
         <div className="hidden lg:flex items-center gap-12">
           <nav className="flex items-center gap-4">

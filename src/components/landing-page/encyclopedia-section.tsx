@@ -19,17 +19,17 @@ const EncyclopediaSection = () => {
         enciclopédia jurídica
       </h1>
 
-      <div className="w-full flex items-center h-fit lg:h-[270px]">
-        <div className="flex lg:flex-row flex-col items-center border-2 border-azul p-4 rounded-[30px] w-full h-full">
-          <div className="relative w-full lg:w-[450px] lg:h-full h-[240px] mb-4 lg:mb-0">
+      <div className="w-full flex items-center h-fit lg:h-[300px]">
+        <div className="flex lg:flex-row flex-col items-center border-2 border-azul p-1 rounded-3xl w-full h-full">
+          <div className="relative w-full lg:w-[380px] lg:h-full h-[240px] mb-4 lg:mb-0">
             <img
               src={`card/card-${filter}.jpg`}
               alt="card-image"
-              className="object-cover rounded-[30px] h-full absolute inset-0 w-full"
+              className="object-cover rounded-3xl h-full absolute inset-0 w-full"
             />
           </div>
 
-          <hr className="h-full mx-6 w-[2px] bg-zinc-200" />
+          <hr className="h-[80%] mx-6 w-[2px] bg-zinc-200" />
 
           <div className="flex flex-col w-full text-azul items-center lg:items-start justify-center h-full gap-6">
             <h1 className="text-2xl uppercase font-semibold">
@@ -52,10 +52,10 @@ const EncyclopediaSection = () => {
             onClick={() => handleFilter("1")}
             className={`absolute shadow-xl left-0 top-0 text-white h-14 text-2xl transition-all duration-200 ease-in-out rounded-r-lg ${
               filter === "1"
-                ? "bg-azul z-30 w-14"
+                ? "bg-azul z-30 w-12"
                 : filter === "3"
-                ? "bg-neutral-500 z-5 w-10"
-                : "bg-neutral-500 z-5 w-10"
+                ? "bg-neutral-500 z-5 w-8"
+                : "bg-neutral-500 z-5 w-8"
             }`}
           >
             1
@@ -65,10 +65,10 @@ const EncyclopediaSection = () => {
             onClick={() => handleFilter("2")}
             className={`absolute left-0 shadow-xl top-12 text-white h-14 text-xl rounded-r-lg transition-all duration-200 ease-in-out ${
               filter === "2"
-                ? "bg-azul z-20 w-14"
+                ? "bg-azul z-20 w-12"
                 : filter === "3"
-                ? "w-12 bg-neutral-400"
-                : "w-12 bg-neutral-400 z-20"
+                ? "w-10 bg-neutral-400"
+                : "w-10 bg-neutral-400 z-20"
             }`}
           >
             2
@@ -77,7 +77,7 @@ const EncyclopediaSection = () => {
           <button
             onClick={() => handleFilter("3")}
             className={`absolute left-0 top-24 text-white h-14 text-lg rounded-r-lg transition-all duration-200 ease-in-out ${
-              filter === "3" ? "bg-azul z-20 w-14" : "bg-neutral-200 z-0 w-8"
+              filter === "3" ? "bg-azul z-20 w-12" : "bg-neutral-200 z-0 w-8"
             }`}
           >
             3
