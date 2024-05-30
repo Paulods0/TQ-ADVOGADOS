@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="w-[80%] mx-auto h-1 bg-azul absolute -top-1 left-1/2 -translate-x-1/2" />
 
         <Container className="flex items-center justify-end h-full">
-          <form className="bg-transparent space-y-8 w-full lg:w-[450px]">
+          <form className="bg-transparent space-y-8 w-full lg:w-[400px]">
             <div className="w-full">
               <h1 className="text-2xl text-azul uppercase font-semibold">
                 fale connosco
