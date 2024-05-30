@@ -4,6 +4,7 @@ import { HEADER_LINKS } from "@/constants"
 import Search from "./search"
 import { useState } from "react"
 import MobileMenu from "../mobile-components/mobile-menu"
+import { motion } from "framer-motion"
 
 const Header = () => {
   const [canChange, setCanChange] = useState(false)
@@ -17,7 +18,10 @@ const Header = () => {
   })
 
   return (
-    <header
+    <motion.header
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.2, delay: 0.5, ease: "easeIn" }}
       className={`fixed w-full transition-all z-50 duration-200 ease-in-out ${
         canChange ? "bg-white shadow-md" : "bg-transparent"
       }`}
@@ -48,7 +52,7 @@ const Header = () => {
 
         <MobileMenu />
       </Container>
-    </header>
+    </motion.header>
   )
 }
 

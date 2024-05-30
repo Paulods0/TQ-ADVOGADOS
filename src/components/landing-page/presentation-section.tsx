@@ -5,11 +5,12 @@ const PresentationSection = () => {
     <Container className="flex lg:flex-row flex-col items-center mt-12 justify-between w-full gap-8">
       <div className="relative h-[400px] w-full lg:w-[460px]">
         <img
+          loading="lazy"
           src="woman.jpg"
           className="w-full h-full absolute inset-0 object-cover rounded-3xl"
         />
         <div className="w-full absolute text-white text-center capitalize z-10 bottom-2 flex flex-col left-1/2 -translate-x-1/2">
-          <h1 className=" text-2xl">Lisandra Moura</h1>
+          <h1 className=" text-2xl">Ana Maria</h1>
           <h3 className=" text-lg">advogada</h3>
         </div>
       </div>
